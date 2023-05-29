@@ -51,13 +51,15 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Pokemon List</h1>
-      <ul>
+    <div className="container mx-auto">
+      <h1 className="inline-block text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200 mb-5">Pokemon List</h1>
+      <div className="columns-3">
+      <ul className="list-disc">
         {pokemons.map((pokemon) => (
           <li key={pokemon.id}>{pokemon.name}</li>
         ))}
       </ul>
+      </div>
     </div>
   );
 };
